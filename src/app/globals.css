@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #ffffff;
+  --color-foreground: #171717;
+  --color-dirgham-gold: #cbb37c;
+  --color-dirgham-dark: #211f1d;
+  --color-dirgham-accent: #746344;
+  --color-dirgham-neutral: #8b8b8c;
+  --color-dirgham-muted: #8c9480;
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-outfit);
+}
+
+/* Custom Utilities for background pattern */
+@utility bg-dirgham-dark {
+  background-color: #211f1d;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
