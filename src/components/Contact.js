@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send, Loader2 } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Loader2, Facebook, Instagram } from "lucide-react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -107,6 +107,18 @@ export default function Contact() {
                 <div>
                   <h4 className="text-white font-bold text-lg mb-1">Alamat Email</h4>
                   <p className="text-gray-400">dirghamsaefullahperkasa@gmail.com</p>
+                </div>
+              </div>
+
+              <div className="pt-6 mt-6 border-t border-white/10">
+                <h4 className="text-white font-bold text-lg mb-4">Media Sosial</h4>
+                <div className="flex gap-4">
+                  <a href="https://www.facebook.com/profile.php?id=61588597033504" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-dirgham-gold hover:text-dirgham-dark transition-all duration-300">
+                    <Facebook size={18} />
+                  </a>
+                  <a href="https://www.instagram.com/dirghamsaefullah/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-dirgham-gold hover:text-dirgham-dark transition-all duration-300">
+                    <Instagram size={18} />
+                  </a>
                 </div>
               </div>
             </div>

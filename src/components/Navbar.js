@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, Phone, Mail, Clock } from "lucide-react";
+import { Menu, X, Phone, Mail, Clock, Facebook, Instagram } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
@@ -21,6 +21,7 @@ export default function Navbar() {
     { name: "Beranda", href: "/" },
     { name: "Tentang", href: "#about" },
     { name: "Layanan", href: "#services" },
+    { name: "Proyek", href: "#projects" },
     { name: "Kontak", href: "#contact" },
   ];
 
@@ -43,9 +44,19 @@ export default function Navbar() {
               <span>0851 9494 0033</span>
             </div>
           </div>
-          <div className="flex items-center gap-2">
-            <Clock size={14} className="text-dirgham-gold" />
-            <span>Senin - Jumat: 08.00 - 17.00 WIB</span>
+          <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2">
+              <Clock size={14} className="text-dirgham-gold" />
+              <span>Senin - Jumat: 08.00 - 17.00 WIB</span>
+            </div>
+            <div className="flex items-center gap-3 border-l border-white/20 pl-4">
+              <a href="https://www.facebook.com/profile.php?id=61588597033504" target="_blank" rel="noopener noreferrer" className="hover:text-dirgham-gold transition-colors">
+                <Facebook size={14} />
+              </a>
+              <a href="https://www.instagram.com/dirghamsaefullah/" target="_blank" rel="noopener noreferrer" className="hover:text-dirgham-gold transition-colors">
+                <Instagram size={14} />
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -128,6 +139,14 @@ export default function Navbar() {
                    <div className="flex items-center gap-3">
                     <Clock size={16} className="text-dirgham-gold" />
                     <span>Sen - Jum: 08.00 - 17.00</span>
+                  </div>
+                  <div className="flex items-center gap-4 pt-2">
+                    <a href="https://www.facebook.com/profile.php?id=61588597033504" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-dirgham-gold transition-colors">
+                      <Facebook size={18} />
+                    </a>
+                    <a href="https://www.instagram.com/dirghamsaefullah/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-dirgham-gold transition-colors">
+                      <Instagram size={18} />
+                    </a>
                   </div>
                 </div>
 

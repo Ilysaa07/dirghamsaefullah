@@ -13,18 +13,21 @@ const outfit = Outfit({
 
 export const metadata = {
   metadataBase: new URL('https://dirghamsaefullah.com'),
-  title: "PT. DIRGHAM SAEFULLAH PERKASA - Kontraktor & Supplier Umum",
-  description: "Jasa Kontraktor Umum Profesional. Keunggulan konstruksi, renovasi, dan desain oleh PT. DIRGHAM SAEFULLAH PERKASA.",
-  keywords: ["Kontraktor Umum", "General Contractor", "Konstruksi Rumah", "Renovasi Bangunan", "Desain Interior", "Supplier Material", "Tangerang", "Jakarta", "Indonesia", "PT Dirgham Saefullah Perkasa", "Jasa Bangun Rumah"],
-  authors: [{ name: "PT. DIRGHAM SAEFULLAH PERKASA" }],
+  title: {
+    default: "🏆 PT Dirgham Saefullah Perkasa | Jasa Kontraktor Tangerang Terpercaya",
+    template: "%s | PT Dirgham Saefullah Perkasa"
+  },
+  description: "Mencari kontraktor di Tangerang/Banten? PT Dirgham Saefullah Perkasa siap bantu bangun/renovasi dengan RAB transparan & tukang berpengalaman. Konsultasi GRATIS sekarang!",
+  keywords: ["Jasa Kontraktor Tangerang", "Kontraktor Banten", "General Contractor", "Bangun Bangunan", "Renovasi Rumah Tangerang", "Desain Interior", "PT Dirgham Saefullah Perkasa", "Kontraktor Terpercaya"],
+  authors: [{ name: "Dirgham Saefullah" }],
   creator: "PT. DIRGHAM SAEFULLAH PERKASA",
   publisher: "PT. DIRGHAM SAEFULLAH PERKASA",
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: "PT. DIRGHAM SAEFULLAH PERKASA - Kontraktor & Supplier Umum",
-    description: "Mitra terpercaya Anda untuk keunggulan konstruksi dan renovasi.",
+    title: "🏆 PT Dirgham Saefullah Perkasa | Jasa Kontraktor Tangerang Terpercaya",
+    description: "Mencari kontraktor di Tangerang/Banten? PT Dirgham Saefullah Perkasa siap bantu bangun/renovasi dengan RAB transparan & tukang berpengalaman. Konsultasi GRATIS sekarang!",
     url: "https://dirghamsaefullah.com",
     siteName: "PT. DIRGHAM SAEFULLAH PERKASA",
     locale: "id_ID",
@@ -48,15 +51,36 @@ export default function RootLayout({ children }) {
     "@type": "GeneralContractor",
     "name": "PT. DIRGHAM SAEFULLAH PERKASA",
     "image": "https://dirghamsaefullah.com/logo.webp",
-    "description": "Jasa Kontraktor Umum Profesional. Keunggulan konstruksi, renovasi, dan desain oleh PT. DIRGHAM SAEFULLAH PERKASA.",
+    "description": "Jasa kontraktor umum profesional, renovasi, dan bangun rumah di Tangerang dan Banten.",
     "url": "https://dirghamsaefullah.com",
-    "telephone": "+6289691118807",
+    "telephone": "+6285194940033",
+    "priceRange": "Rp1.000.000 - Rp10.000.000+",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Jalan Benteng Jaya",
       "addressLocality": "Tangerang",
+      "addressRegion": "Banten",
       "addressCountry": "ID"
     },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -6.178306,
+      "longitude": 106.631889
+    },
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Tangerang"
+      },
+      {
+        "@type": "City",
+        "name": "Tangerang Selatan"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Banten"
+      }
+    ],
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": [
@@ -69,7 +93,10 @@ export default function RootLayout({ children }) {
       "opens": "08:00",
       "closes": "17:00"
     },
-    "priceRange": "$$"
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=61588597033504",
+      "https://www.instagram.com/dirghamsaefullah/"
+    ]
   };
 
   return (

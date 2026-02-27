@@ -1,38 +1,45 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Hammer, PencilRuler, HardHat, Warehouse, Key, ShieldCheck } from "lucide-react";
+import Link from "next/link";
+import { Hammer, PencilRuler, HardHat, Warehouse, Key, ShieldCheck, ArrowRight } from "lucide-react";
 
 export default function Services() {
   const services = [
     {
       icon: Hammer,
       title: "Konstruksi Umum",
+      slug: "konstruksi-umum",
       desc: "Layanan konstruksi komprehensif mulai dari pondasi hingga finishing, memastikan ketahanan struktural."
     },
     {
       icon: PencilRuler,
       title: "Desain & Perencanaan",
+      slug: "desain-dan-perencanaan",
       desc: "Desain arsitektur dan perencanaan ruang untuk mengoptimalkan estetika dan fungsionalitas."
     },
     {
       icon: HardHat,
       title: "Layanan Renovasi",
+      slug: "layanan-renovasi",
       desc: "Mengubah ruang yang ada dengan peningkatan modern dan sentuhan akhir premium."
     },
     {
       icon: Warehouse,
       title: "Suplier Material",
+      slug: "suplier-material",
       desc: "Menyediakan material konstruksi berkualitas tinggi yang dapat diandalkan untuk setiap skala proyek."
     },
     {
       icon: Key,
       title: "Proyek Terima Jadi",
+      slug: "proyek-terima-jadi",
       desc: "Manajemen proyek menyeluruh (Turnkey Project), menyerahkan kunci properti yang siap huni sepenuhnya kepada Anda."
     },
     {
       icon: ShieldCheck,
       title: "Pemeliharaan & Perbaikan",
+      slug: "pemeliharaan-dan-perbaikan",
       desc: "Layanan pemeliharaan berkelanjutan untuk menjaga properti Anda dalam kondisi prima."
     }
   ];
@@ -77,17 +84,24 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white/5 border border-white/5 p-8 rounded-2xl hover:bg-white/10 hover:border-dirgham-gold/30 transition-all duration-300 group"
             >
-              <div className="w-14 h-14 bg-dirgham-gold/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-dirgham-gold group-hover:text-dirgham-dark transition-colors text-dirgham-gold">
-                <service.icon size={28} />
-              </div>
-              <h3 className="text-xl font-bold font-heading mb-3 group-hover:text-dirgham-gold transition-colors">
-                {service.title}
-              </h3>
-              <p className="text-gray-400 leading-relaxed">
-                {service.desc}
-              </p>
+              <Link 
+                href={`/layanan/${service.slug}`}
+                className="block bg-white/5 border border-white/5 p-8 rounded-2xl hover:bg-white/10 hover:border-dirgham-gold/30 transition-all duration-300 group h-full"
+              >
+                <div className="w-14 h-14 bg-dirgham-gold/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-dirgham-gold group-hover:text-dirgham-dark transition-colors text-dirgham-gold">
+                  <service.icon size={28} />
+                </div>
+                <h3 className="text-xl font-bold font-heading mb-3 group-hover:text-dirgham-gold transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-gray-400 leading-relaxed mb-6">
+                  {service.desc}
+                </p>
+                <div className="flex items-center text-dirgham-gold font-semibold text-sm gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                  Pelajari Lebih Lanjut <ArrowRight size={16} />
+                </div>
+              </Link>
             </motion.div>
           ))}
         </div>

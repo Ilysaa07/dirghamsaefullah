@@ -15,13 +15,19 @@ export default function Footer() {
               Kami adalah kontraktor umum terkemuka yang berdedikasi untuk memberikan keunggulan dalam konstruksi, renovasi, dan desain. Membangun masa depan Anda dengan presisi dan integritas.
             </p>
             <div className="flex gap-4">
-              {[Instagram, Facebook, Linkedin].map((Icon, i) => (
+              {[
+                { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61588597033504" },
+                { icon: Instagram, href: "https://www.instagram.com/dirghamsaefullah/" },
+                { icon: Linkedin, href: "#" }
+              ].map((social, i) => (
                 <a
                   key={i}
-                  href="#"
+                  href={social.href}
+                  target={social.href !== "#" ? "_blank" : "_self"}
+                  rel={social.href !== "#" ? "noopener noreferrer" : undefined}
                   className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-dirgham-gold hover:text-dirgham-dark transition-all duration-300"
                 >
-                  <Icon size={18} />
+                  <social.icon size={18} />
                 </a>
               ))}
             </div>

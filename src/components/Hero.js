@@ -24,14 +24,14 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
         >
           <span className="inline-block px-4 py-2 border border-dirgham-gold/30 rounded-full text-dirgham-gold text-sm font-semibold tracking-wider uppercase mb-6 bg-black/30 backdrop-blur-sm">
-            Kontraktor & Supplier Umum
+            PT. Dirgham Saefullah Perkasa
           </span>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-heading text-white mb-6 leading-tight">
-            Membangun Visi dengan <br />
-            <span className="text-dirgham-gold">Presisi & Integritas</span>
+            Jasa Kontraktor Tangerang <br />
+            <span className="text-dirgham-gold">Terpercaya & Berpengalaman</span>
           </h1>
           <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-            PT. DIRGHAM SAEFULLAH PERKASA memberikan solusi konstruksi, renovasi, dan desain premium yang disesuaikan dengan kebutuhan unik Anda.
+            Solusi konstruksi, bangun rumah, dan renovasi bangunan premium yang disesuaikan dengan kebutuhan unik Anda di wilayah Tangerang dan Banten.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
